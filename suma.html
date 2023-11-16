@@ -5,7 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suma de Dos numeros</title>
     <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="suma.js">
+
+    <script>
+
+        function Suma() {
+
+            var numero_1 = parseFloat(document.getElementById('num_1').value);
+
+            var numero_2 = parseFloat(document.getElementById('num_2').value);
+
+            if (!isNaN(numero_1) && !isNaN(numero_2)) {
+
+                var suma = numero_1 + numero_2;
+
+                document.getElementById('mensaje').innerHTML = "La suma de los dos numeros es: " + suma;
+
+            } else {
+                document.getElementById('mensaje').innerHTML = "Digitacion no valida";
+            }
+
+        }
+
+    </script>
+
 </head>
 <body>
     <main id="cuerpo">
@@ -16,13 +38,17 @@
 
         <form>
 
-            <input type="text" id="num_1">
+            <input type="text" id="num_1" placeholder="Digite el primer numero">
 
-            <input type="text" id="num_2">
+            <input type="text" id="num_2" placeholder="Digite el segundo numero">
 
-            <button type="button" onclick="" ></button>
+            <button type="button" onclick="Suma()" >Sumar</button>
 
         </form>
+
+        <div id="conten_msj">
+            <p id="mensaje"></p>
+        </div>
 
     </main>
 </body>
