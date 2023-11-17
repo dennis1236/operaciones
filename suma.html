@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suma de Dos numeros</title>
     <link rel="stylesheet" href="estilos.css">
-
+    
     <script>
 
         function Suma() {
@@ -18,10 +18,10 @@
 
                 var suma = numero_1 + numero_2;
 
-                document.getElementById('mensaje').innerHTML = "La suma de los dos numeros es: " + suma;
+                document.getElementById('mensaje').innerHTML = suma;
 
             } else {
-                document.getElementById('mensaje').innerHTML = "Digitacion no valida";
+                document.getElementById('mensaje').innerHTML = "ERROR";
             }
 
         }
@@ -32,24 +32,39 @@
 <body>
     <main id="cuerpo">
 
-        <div id="conten_titulo">
-            <h1>Suma de dos numeros</h1>
-        </div>
 
-        <form>
+        <section id="conten_titulo">
+                <p>Suma de dos numeros</p>
+        </section>
 
-            <input type="text" id="num_1" placeholder="Digite el primer numero">
-
-            <input type="text" id="num_2" placeholder="Digite el segundo numero">
-
-            <button type="button" onclick="Suma()" >Sumar</button>
 
             
-        </form>
+            <form  id="conten_todo">
+                <div id="conten_suma">
+                    <div>
+                        <input type="text" id="num_1" class="formulario">
+                    </div>
+                    <div class="signos">
+                        <p>+</p>
+                    </div>
+                    <div>
+                        <input type="text" id="num_2" class="formulario" >
+                    </div>
+                    <div class="signos">
+                        <p>=</p>
+                    </div>
+                    <div id="conten_msj">
+                        <p id="mensaje"></p>
+                    </div>
+                </div>
 
-        <div id="conten_msj">
-            <p id="mensaje"></p>
-        </div>
+                <div>
+                    <button type="button" onclick="Suma()" >Sumar</button>
+                </div>
+            </form>
+
+            
+
 
     </main>
 </body>
