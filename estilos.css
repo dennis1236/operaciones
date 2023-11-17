@@ -68,7 +68,7 @@ main#cuerpo {
                 width: 70px;
                 height: 60px;
                 background-color: rgba(172, 172, 172, 0.25);
-                border: 1px solid #5B5B5B;
+                border: 1px solid rgb(255, 255, 255);
                 border-radius: 10px;
                 font-size: 1.3em;
                 display: flex;
@@ -84,12 +84,17 @@ input.formulario {
     width: 70px;
     height: 60px;
     background-color: rgba(172, 172, 172, 0.25);
-    border: 1px solid #5B5B5B;
+    border: none;
     border-radius: 10px;
     font-size: 1.3em;
     padding-left: 15%;
     color: #525252;
+    outline: none;
 }
+    input.formulario:focus {
+        transform: scale(1.22);
+        border-color: rgb(255, 255, 255);
+    }
 
 .signos {
     font-size: 2.1em;
@@ -98,7 +103,7 @@ input.formulario {
 button {
     border: none;
     border-radius: 30px;
-    width: 300px;
+    width: 250px;
     height: 50px;
     font-size: 1.6em;
 }
@@ -107,4 +112,17 @@ button {
     }
     button:active {
         background-color: black;
+    }
+
+
+button#btn-reiniciar {
+    background-color: #5B5B5B;
+    color: white;
+}
+    button#btn-reiniciar:hover {
+        cursor: pointer;
+    }
+    button#btn-reiniciar:active {
+        color: #525252;
+        background-color: white;
     }
